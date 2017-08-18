@@ -83,7 +83,7 @@
   #include "oad.h"
   #include "oad_target.h"
 #endif
-
+#include "npi.h"
 /*********************************************************************
  * MACROS
  */
@@ -827,7 +827,9 @@ static void performPeriodicTask( void )
 static void simpleProfileChangeCB( uint8 paramID )
 {
   uint8 newValue;
-
+  uint8 newChar7Value[SIMPLEPROFILE_CHAR7_LEN];
+  uint8 len;
+  
   switch( paramID )
   {
     case SIMPLEPROFILE_CHAR1:
@@ -847,6 +849,12 @@ static void simpleProfileChangeCB( uint8 paramID )
       #endif // (defined HAL_LCD) && (HAL_LCD == TRUE)
 
       break;
+      
+    case SIMPLEPROFILE_CHAR7:
+      len = SimpleProfile_GetParameter_Len( SIMPLEPROFILE_CHAR7, &newChar7Value );
+      HalLcdWriteString((char*)newChar7Value,  HAL_LCD_LINE_5);
+      NPI_WriteTransport(newChar7Value, len);
+      break;  
 
     default:
       // should not reach here!
