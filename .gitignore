@@ -1,5 +1,11 @@
 Projects/ble/SimpleBLEPeripheral/CC2541DB/CC2541/Obj*
 *.map
+Projects/ble/SimpleBLEPeripheral/CC2541DB/SimpleBLEPeripheral.dep
+Projects/ble/SimpleBLEPeripheral/CC2541DB/CC2541/
+Projects/ble/SimpleBLEPeripheral/CC2541DB/EW7886.tmp
+Projects/ble/SimpleBLEPeripheral/CC2541DB/EW7887.tmp
+Projects/ble/SimpleBLEPeripheral/CC2541DB/EW7887.tmp.c
+
 
 
 
