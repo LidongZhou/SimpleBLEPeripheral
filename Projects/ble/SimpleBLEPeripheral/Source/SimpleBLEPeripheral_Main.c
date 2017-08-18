@@ -62,6 +62,7 @@
 #include "OSAL_PwrMgr.h"
 #include "osal_snv.h"
 #include "OnBoard.h"
+#include "simpleBLEUart.h"
 
 /**************************************************************************************************
  * FUNCTIONS
@@ -92,7 +93,8 @@ int main(void)
   osal_snv_init();
 
   /* Initialize LL */
-
+  /* Initialize UART */
+  simpleBLE_NPI_init();
   /* Initialize the operating system */
   osal_init_system();
 

@@ -8,6 +8,9 @@ Projects/ble/SimpleBLEPeripheral/CC2541DB/EW7887.tmp.c
 *.tmp
 *.wsdt
 .dep
+*.tmp.c
+*.ewp
+*.dni
 
 
 
